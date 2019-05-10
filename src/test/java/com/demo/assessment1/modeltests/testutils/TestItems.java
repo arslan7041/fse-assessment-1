@@ -17,5 +17,6 @@ public class TestItems {
         lineitems.add(new LineItem(new Product("bag", 150), 1));
 
 
+        return lineitems;
     }
 }
