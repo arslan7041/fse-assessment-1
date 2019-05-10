@@ -51,8 +51,14 @@ public class Cart {
     }
 
     public void showCart(){
+        double total = 0;
         for(LineItem lineItem: lineItems){
-            System.out.println(lineItem.getProduct().getName() + " ---- > " + lineItem.getProduct().getPrice() + " x " + lineItem.getQuantity());
+            double price = lineItem.getProduct().getPrice();
+            int quantity = lineItem.getQuantity();
+            total +=  price * quantity;
+            System.out.println(lineItem.getProduct().getName() + " ---- > " + price + " x " + quantity);
         }
+
+        System.out.println("Total is: --------- > $" + total);
     }
 }
