@@ -5,7 +5,7 @@
 ## Overview
 Cognizant has been engaged to help build a site for **Ali Snobba** - a snobby online store where customers purchase high-end merchandise like Louis Vuitton handbags and Rolex watches.
 
-We need to model a Shopping Cart that stores items while customers are going through the checkout process.  This basic cart will work like all basic carts you’ve ever used while shopping online.
+We need to model a Shopping Cart that stores lineItems while customers are going through the checkout process.  This basic cart will work like all basic carts you’ve ever used while shopping online.
 
 ## Your Task
 - Create the model classes for Cart, LineItem, and Product, that meet the requirements below, and thoroughly unit-test them.
@@ -21,8 +21,8 @@ We need to model a Shopping Cart that stores items while customers are going thr
 - As a customer, I can decrease the quantity of a line item by 1. If I decrease it to 0, the line item disappears.
 - As a customer, I can see the discounted price of each line item in my cart (product price X quantity of that product).
 - As a customer, I can see the un-discounted price of each line item in my cart, so I can see how much I’m saving.
-- As a customer, I can see the total, discounted price of all line items in my cart.
-- As a customer, I can see the total, un-discounted price of all line items in my cart.
+- As a customer, I can see the total, discounted price of all line lineItems in my cart.
+- As a customer, I can see the total, un-discounted price of all line lineItems in my cart.
 
 ## Technical Requirements
 - Use plain old Java, NO frameworks such as Spring, and NO ORM libraries.
