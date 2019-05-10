@@ -25,4 +25,12 @@ public class LineItem {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public void increaseQuantity(){
+        quantity += 1;
+    }
+
+    public void decreaseQuantity(){
+        quantity -= 1;
+    }
 }

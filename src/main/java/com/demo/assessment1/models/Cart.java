@@ -4,17 +4,49 @@ import java.util.List;
 
 public class Cart {
 
-    List<LineItem> items;
+    List<LineItem> lineItems;
 
     public Cart(List<LineItem> items) {
-        this.items = items;
+        this.lineItems = items;
     }
 
-    public List<LineItem> getItems() {
-        return items;
+    public List<LineItem> getLineItems() {
+        return lineItems;
     }
 
-    public void setItems(List<LineItem> items) {
-        this.items = items;
+    public void setLineItems(List<LineItem> lineItems) {
+        this.lineItems = lineItems;
+    }
+
+    public void addProduct(Product p){
+        for(LineItem lineItem : lineItems){
+            if(lineItem.getProduct().getName().equals(p.getName())){
+                lineItem.increaseQuantity();
+                return;
+            }
+        }
+
+        lineItems.add(new LineItem(p, 1));
+    }
+
+    public void increaseQuantity(Product p){
+        for(LineItem lineItem : lineItems){
+            if(lineItem.getProduct().getName().equals(p.getName())){
+                lineItem.increaseQuantity();
+                return;
+            }
+        }
+    }
+
+    public void decreaseQuantity(Product p){
+        for(LineItem lineItem : lineItems){
+            if(lineItem.getProduct().getName().equals(p.getName())){
+                lineItem.decreaseQuantity();
+                if(lineItem.getQuantity() == 0){
+                    lineItems.remove(lineItem);
+                    return;
+                }
+            }
+        }
     }
 }
