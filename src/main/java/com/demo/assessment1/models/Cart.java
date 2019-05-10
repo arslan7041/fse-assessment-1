@@ -49,4 +49,10 @@ public class Cart {
             }
         }
     }
+
+    public void showCart(){
+        for(LineItem lineItem: lineItems){
+            System.out.println(lineItem.getProduct().getName() + " ---- > " + lineItem.getProduct().getPrice() + " x " + lineItem.getQuantity());
+        }
+    }
 }
